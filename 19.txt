@@ -1,0 +1,401 @@
+functions:
+-----------------
+def add(n1,n2):
+    return n1+n2
+print(add(10,20))
+lambda:
+--------------------------
+def add(n1,n2):
+     return n1 + n2
+
+
+
+
+------------------------------------------
+def add(n1,n2):
+    return n1+n2
+res = add(10,20)
+print(res % 2 == 0)
+-----------------------------------------------------
+import copy
+arr1 = [2,3,4,5]
+arr2 = copy.decopy(arr1)
+arr1.append(10)
+print(arr1,arr2)
+-------------------------------------------------
+arr = [1,2,3,5,7,9]
+arr.pop(2)
+print(arr)
+o/p:1,2,5,7,9
+--------------------------------------------------------------
+import copy
+arr = [1,2,3,5,7,9]
+original = copy.deepcopy(arr)
+for i in arr:
+    if i % 2 == 0:
+       arr.remove(i)
+print(original, arr)
+o/p:
+---------
+[1, 2, 3, 5, 7, 9] [1, 3, 5, 7, 9]
+---------------------------------------------------------------------
+another method:
+--------------------------------------
+method-2:
+------------------------------
+arr = [1,3,5,7,9]
+isDeleted = False
+for i in arr:
+    if i % 2 == 0:
+       arr.remove(i)
+       isDeleted = True
+       break
+if isDeleted == True:
+    print("Not same after removing")
+else:
+    print("Same after removing")
+o/p:
+------------------------------------------
+Same after removing
+-----------------------------------------------------------
+num1 = 12
+num2 = 30
+factors1 = []
+factors2 = []
+for i in range(2, num1+1):
+    if num1 % i == 0:
+        factors1.append(i)
+for i in range(2, num2+1):
+    if num2 % i == 0:
+        factors2.append(i)
+print(factors1, factors2)
+for i in factors1:
+    for j in factors2:
+        print(i,j)
+            -----------------------
+o/p:
+-----------------
+[2, 3, 4, 6, 12] [2, 3, 5, 6, 10, 15, 30]
+2 2
+2 3
+2 5
+2 6
+2 10
+2 15
+2 30
+3 2
+3 3
+3 5
+3 6
+3 10
+3 15
+3 30
+4 2
+4 3
+4 5
+4 6
+4 10
+4 15
+4 30
+6 2
+6 3
+6 5
+6 6
+6 10
+6 15
+6 30
+12 2
+12 3
+12 5
+12 6
+12 10
+12 15
+12 30
+
+=== Code Execution Successful ===
+-------------------------------------
+num1 = 12
+num2 = 30
+factors1 = []
+factors2 = []
+for i in range(2, num1+1):
+    if num1 % i == 0:
+        factors1.append(i)
+for i in range(2, num2+1):
+    if num2 % i == 0:
+        factors2.append(i)
+print(factors1, factors2)
+for i in factors1:
+    for j in factors2:
+        print(i == j)
+            -----------------------
+o/p:
+------------------------
+[2, 3, 4, 6, 12] [2, 3, 5, 6, 10, 15, 30]
+True
+False
+False
+False
+False
+False
+False
+False
+True
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+True
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+
+=== Code Execution Successful ===
+-----------------------------------------
+c = 30
+factors1 = []
+factors2 = []
+for i in range(2, num1+1):   #to get factors of num1
+    if num1 % i == 0:
+        factors1.append(i)
+for i in range(2, num2+1):# to get factors of num1
+    if num2 % i == 0:
+        factors2.append(i)
+print(factors1,factors2)
+maxi = None
+for i in factors1: # to compare and  update maximum common factor
+    for j in factors2:
+        if i == j:
+            maxi = i
+print(f"GCD of {num1} and {num2} of {maxi}")
+  o/p---------------
+[2, 3, 4, 6, 12] [2, 3, 5, 6, 10, 15, 30]
+GCD of 12 and 30 of 6
+
+=== Code Execution Successful ===
+--------------------------------------------------
+s = "codin"
+(print(id (s)))///# ee line add chestha address vachidi
+s += "g"
+print(s)
+o/p------------------
+coding.....
+----------------------------
+s = [1,2,3]
+print("before changing",id(s))
+s += "g"
+print("after changing",id(s))
+o/p:
+-------------------------
+before changing 137294687896064
+after changing 137294687896064
+
+=== Code Execution Successful ===
+-------------------------------------------------------
+Dict:only immutable pettalii
+-------------------------------------------
+details = {}
+details["Name"] = "Srihaan"
+details["Branch"] = "cse"
+print(details)
+o/p:
+-----------------------
+{'Name': 'Srihaan', 'Branch': 'cse'}
+
+=== Code Execution Successful ===
+---------------------------------------------------
+using frozenset:
+----------------------------------------
+details = {}
+details["Name"] = "Srihaan"
+details["Branch"] = "cse"
+details[23] = "age"
+details [frozenset({"Pincode","Address"})] = [("Kanigiri","523230")]
+print(details)
+o/p:
+--------------------------------
+-{'Name': 'Srihaan', 'Branch': 'cse', 23: 'age', frozenset({'Address', 'Pincode'}): [('Kanigiri', '523230')]}
+
+=== Code Execution Successful ===----------------------------
+-------------------------------------------------
+immutable or muttable lo kanukovadaniki id keyword use cheyalii
+------------------------------------------------------------------------
+is and ===
+---------------------------------------------------------------------------------------
+s = "codin"
+n = s + "g"
+print("coding" == n)# letter to letter
+print("coding" is n) #it is powerfull(fast)
+o/p:
+----------------------------
+<main.py>:4: SyntaxWarning: "is" with a literal. Did you mean "=="?
+True
+False
+
+=== Code Execution Successful ===
+--------------------------------------------------------------------------------------------
+3,7,11,15.............10 th number?
+-------------------------------
+#simplify form of 21/49
+--------------------------------------
+program:
+------------------------
+
+addition of two numbers using function:
+---------------------------
+def add(n,m):
+    print(f"Addition of {n} and {m} is {n + m}")
+    return n + m
+res = add(10,20)
+print(res)
+o/p:
+----------------
+Addition of 10 and 20 is 30
+30
+
+=== Code Execution Successful ===
+--------------------------------------------------
+GCD program
+----------------------------------------------------------
+def gcd(num1,num2):
+    factors1 = []
+    factors2 = []
+    for i in range(2, num1+1):   #to get factors of num1
+        if num1 % i == 0:
+            factors1.append(i)
+    for i in range(2, num2+1):# to get factors of num1
+        if num2 % i == 0:
+            factors2.append(i)
+    print(factors1,factors2)
+    maxi = None
+    for i in factors1: # to compare and  update maximum common factor
+        for j in factors2:
+            if i == j:
+                maxi = i
+    print(f"GCD of {num1} and {num2} of {maxi}")
+n = 21
+d = 49
+res = gcd(21,49)
+print(res)
+o/p:
+------------------
+[3, 7, 21] [7, 49]
+GCD of 21 and 49 of 7
+None
+
+=== Code Execution Successful ===
+---------------------------------------------------------
+
+
+negative ne positive ga convert cheyadaniki ee three models use chestharuu:
+a= -890
+print(-a)
+print(abs(a))
+print(-1*a)
+----------------------------------------------------------------------------------------
+#next term of 9,15,21,27,33_?
+arr = [9,15,21,27,33]
+diff = abs(arr[0] - arr[1])
+arr.append(arr[-1] + diff)
+print(arr)
+o/p:
+----------------------
+[9, 15, 21, 27, 33, 39]
+
+=== Code Execution Successful ===
+----------------------------------
+Brute force method:(approach)
+------------------------------------------
+arr = [3,7,11,15]
+n = 10
+if n <= len(arr):
+    print(arr[n-1])
+else:
+    current_position = len(arr)
+    diff = abs(arr[0]-arr[1])
+    while current_position < n:
+        arr.append(arr[-1]+diff)
+        current_position +=1
+    print(arr[-1])
+o/p:
+-----------
+39
+----------------------------------------------------
+Efficient approach:
+----------------------------------------
+print((n-len(arr))*diff)+arr[-1])
+---------------------------------------------------
+# find the composite of[19,23,17,9]:
+------------------------------------------------------
+def composite(n):
+    for i in range(2, (n//2)+1):
+        if n % i == 0:
+            return True
+    return False
+
+arr = [19,23,17,9]
+for num in arr:
+    print(num, composite(num))
+o/p:
+----------------------------
+19 False
+23 False
+17 False
+9 True
+
+=== Code Execution Successful ===
+--------------------------------------------------
+return means teminate the whole program
+yield means
+-------------------------------------------------------
+filter lo two untayee
+1.functions
+2.list
+-------------------------------------------------------------
+##filter composite numbers from 10 to 20 in below arr
+#[9,31,32,14,17,43,58,4,6]
+def composite(arr):
+ for n in arr:
+    for i in range(2, (n//2)+1):
+        if n % i == 0:
+            yield n
+            break
+res = list(composite([9,31,32,14,17,43,58,4,6]))
+print(list(filter(lambda x: x>=10 and x <=20,res)))
+o/p:
+--------------
+[14]
+---------------------------------------------
+Factorial programs:
+----------------------------------------------------
+def fact(n):
+    res = 1
+    for i in range(2, n+1):
+        res *= i
+    return res
+print(fact(5))
+o/p:
+-------------------------
+120
+----------------------------------
+#1!+2!+3!+........10!=?
+
+
